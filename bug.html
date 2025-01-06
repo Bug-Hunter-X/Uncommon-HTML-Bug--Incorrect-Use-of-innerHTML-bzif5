@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    //Incorrectly using innerHTML to append a div.  The proper way to add a div to a container is to create the div and then append it.
+    document.getElementById("myDiv").innerHTML += "<div>This text should also be visible.</div>";
+  </script>
+</body>
+</html>
